@@ -1,13 +1,202 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Special+Elite&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Special Elite", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  padding: 2rem 5rem;
+  background-image: linear-gradient(
+    90deg,
+    hsla(33, 100%, 53%, 1) 0%,
+    hsla(58, 100%, 68%, 1) 100%
+  );
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button {
+  font-family: "Special Elite", cursive;
+  padding: 0.8rem 2rem;
+  border: none;
+  background-color: wheat;
+  margin: 1rem;
+  cursor: pointer;
+}
+h1,
+p {
+  margin: 2rem auto;
+}
+
+.circles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.circle {
+  background-color: grey;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgb(72, 72, 72);
+}
+.circle:active {
+  box-shadow: inset 0 0 40px rgb(96, 96, 96);
+}
+
+.circle p {
+  font-size: 2rem;
+}
+
+.active {
+  box-shadow: 0 0 25px rgb(0, 0, 0);
+  background-color: rgb(7, 164, 231);
+  background-size: 100%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.gameover_box {
+  background: white;
+  padding: 1rem;
+  width: 40%;
+  min-height: 25%;
+  border-radius: 5px;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.gameover_box button {
+  background: lightgrey;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+/* body {
+  background-image: linear-gradient(to right top, #db78c6, #82c54a, blue);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100vw;
+  font-family: "Fira Sans Condensed", sans-serif;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+#score {
+  font-size: 2rem;
+}
+
+.circles {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  text-align: center;
+  width: 800px;
+  justify-content: space-between;
+}
+
+.circle {
+  height: 150px;
+  width: 150px;
+  background-color: lightgray;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.circle.active {
+  background-color: yellow;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: lemonchiffon;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  margin: 1 rem;
+  cursor: pointer;
+}
+
+#overlay {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  padding: 2rem;
+  width: 40%;
+  height: 25%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: transparent;
+}
+
+#result {
+  font-size: 2rem;
+}
+
+#stop {
+  display: none;
+} */
+
+.gameover_box {
+  background: white;
+  padding: 1.5rem;
+  width: 40%;
+  min-height: 25%;
+  border-radius: 5px;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
